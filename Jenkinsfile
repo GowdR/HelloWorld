@@ -10,17 +10,16 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
+                echo 'Compiling ...'
+                java Hello.java
             }
         }
         stage('Test') {
             steps {
                 echo 'Testing..'
+                echo 'Executing ...'
+                java Hello
             }
         }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying....'
-            }
-        }
-    }
+      }
 }
