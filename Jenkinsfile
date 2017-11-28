@@ -1,4 +1,6 @@
-pipeline {
+#!groovy
+timestamps {
+node('amplify.jenkins.slave.1.3.2') {
     agent {
     node {
         label 'myagent'
@@ -22,4 +24,5 @@ pipeline {
             }
         }
       }
+}
 }
