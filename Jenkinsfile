@@ -18,7 +18,8 @@ pipeline {
             steps {
                 echo 'Testing..'
                 echo 'Executing ...'
-                sh script: 'java Hello'
+                cd /scratch/rgowd/amplify/jenkin/nodeagent
+                java Hello
             }
         }
       }
