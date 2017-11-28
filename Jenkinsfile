@@ -11,15 +11,15 @@ pipeline {
             steps {
                 echo 'Building..'
                 echo 'Compiling ...'
-                javac Hello.java
+                sh "javac Hello.java"
             }
         }
         stage('Test') {
             steps {
                 echo 'Testing..'
                 echo 'Executing ...'
-                cd /scratch/rgowd/amplify/jenkin/nodeagent
-                java Hello
+                sh "cd /scratch/rgowd/amplify/jenkin/nodeagent"
+                sh "java Hello"
             }
         }
       }
