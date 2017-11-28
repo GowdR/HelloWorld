@@ -1,22 +1,26 @@
 pipeline {
-   agent {
+    agent {
     node {
         label 'myagent'
         customWorkspace '/scratch/rgowd/amplify/jenkin/nodeagent'
     }
-  }
-  
-  stage('Compile') {
+   }
+
+    stages {
+        stage('Build') {
             steps {
-                javac Hello.java 
-                echo 'Compilation is successful!'
+                echo 'Building..'
             }
         }
-   
-   stage('RunCode') {
+        stage('Test') {
             steps {
-                java Hello
-                echo 'Execution App is successful!'
+                echo 'Testing..'
             }
-        }    
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
+            }
+        }
+    }
 }
