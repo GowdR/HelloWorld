@@ -1,4 +1,3 @@
-#!groovy
 node('amplify.jenkins.slave.1.3.2') {
     stages {
         stage('Build') {
