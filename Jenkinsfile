@@ -1,13 +1,6 @@
 #!groovy
 timestamps {
 node('amplify.jenkins.slave.1.3.2') {
-    agent {
-    node {
-        label 'myagent'
-        customWorkspace '/scratch/rgowd/amplify/jenkin/nodeagent'
-    }
-   }
-
     stages {
         stage('Build') {
             steps {
