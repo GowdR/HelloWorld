@@ -1,5 +1,4 @@
 #!groovy
-timestamps {
 node('amplify.jenkins.slave.1.3.2') {
     stages {
         stage('Build') {
@@ -18,4 +17,4 @@ node('amplify.jenkins.slave.1.3.2') {
         }
       }
 }
-}
+
