@@ -11,7 +11,7 @@ pipeline {
             steps {
                 echo 'Building..'
                 echo 'Compiling ...'
-                java Hello.java
+                javac Hello.java
             }
         }
         stage('Test') {
