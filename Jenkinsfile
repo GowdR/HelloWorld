@@ -18,7 +18,7 @@ pipeline {
             steps {
                 echo 'Testing..'
                 echo 'Executing ...'
-                java Hello
+                sh script: 'java Hello'
             }
         }
       }
