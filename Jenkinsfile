@@ -3,6 +3,7 @@ node('amplify.jenkins.slave.1.3.2') {
         stage('Build') {
             steps {
                 echo 'Building..'
+                checkout scm
                 echo 'Compiling ...'
                 sh "javac Hello.java"
             }
